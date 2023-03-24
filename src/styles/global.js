@@ -22,6 +22,10 @@ export default createGlobalStyle`
       font-size: 1.6rem;
       outline: none;
    }
+
+   h1 {
+      color: ${({ theme }) => theme.COLORS.PINK}; 
+   }
    
    a {
       text-decoration: none;

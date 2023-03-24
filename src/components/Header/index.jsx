@@ -1,9 +1,28 @@
-import { Container } from './styles'
+import { Container, RocketMovies, Search, Profile } from './styles'
+
+import { Input } from '../Input'
+
+import { Link } from 'react-router-dom'
 
 export function Header() {
    return (
       <Container>
-         
+         <RocketMovies>
+            <h1>RocketMovies</h1>
+         </RocketMovies>
+
+         <Search>
+            <Input placeholder="Search by title" />
+         </Search>
+
+         <Profile>
+            <div>
+               <span>Alexandre Simões</span>
+               <span>sair</span>
+            </div>
+
+            <a href='#'><img src="https://github.com/alexsmarra.png" alt="User img" /></a>
+         </Profile>
       </Container>
    )
 }
