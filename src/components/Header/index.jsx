@@ -8,7 +8,7 @@ export function Header() {
    return (
       <Container>
          <RocketMovies>
-            <h1>RocketMovies</h1>
+            <a href="#"><h1>RocketMovies</h1></a>
          </RocketMovies>
 
          <Search>

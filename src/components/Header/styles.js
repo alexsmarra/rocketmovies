@@ -6,7 +6,7 @@ export const Container = styled.header`
    width: 100%;
    border-bottom-width: 1px;
    border-bottom-style: solid;
-   border-bottom-color: ${({ theme }) => theme.COLORS.BORDERS};
+   border-bottom-color: ${({ theme }) => theme.COLORS.COLOR_BORDERS};
    display: flex;
    justify-content: space-between;
    align-items: center;
