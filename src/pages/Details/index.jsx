@@ -2,13 +2,20 @@ import { Container } from './styles'
 
 import { Header } from '../../components/Header'
 
-import { ReturnButton } from '../../components/ReturnButton'
+import { Section } from '../../components/Section'
+import { NoteItem } from '../../components/NoteItem'
 
 export function Details() {
    return (
       <Container>
          <Header />
-         <ReturnButton title="Voltar" />
+         <Section title="Marcadores">
+            <div className="aaa">
+
+            <NoteItem value="React" />
+            <NoteItem isNew placeholder="Novo marcador"/>
+            </div>
+         </Section>
       </Container>
    )
 }

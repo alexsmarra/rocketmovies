@@ -15,5 +15,12 @@ export const Container = styled.div`
    h1 {
       font-size: 3.6rem;
    }
+
+   .aaa {
+      display: flex;
+      /* justify-content: space-between; */
+      flex-wrap: wrap;
+      gap: 3rem;
+   }
 `
 
