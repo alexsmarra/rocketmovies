@@ -7,13 +7,13 @@ export const Container = styled.div`
    padding: 8px;
 
    background-color: ${({ theme, isNew }) => isNew ? 'transparent' : theme.COLORS.DARK_GRAY};
-   color: ${({ theme, isNew }) => isNew ? theme.COLORS.DARK_GRAY : 'white'};
+   /* color: ${({ theme, isNew }) => isNew ? theme.COLORS.DARK_GRAY : 'white'}; */
 
    border: ${({ isNew, theme }) => isNew ? `3px dashed ${theme.COLORS.GRAY}` : 'none'};
    border-radius: 10px;
 
    > input {
-      color: ${({ theme, isNew }) => isNew ? theme.COLORS.DARK_GRAY : 'white'};
+      color: white;
       background: transparent;
 
       width: 100%;

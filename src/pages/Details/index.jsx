@@ -2,20 +2,13 @@ import { Container } from './styles'
 
 import { Header } from '../../components/Header'
 
-import { Section } from '../../components/Section'
-import { NoteItem } from '../../components/NoteItem'
+import { SummarySinapse } from '../../components/SummarySinapse'
 
 export function Details() {
    return (
       <Container>
          <Header />
-         <Section title="Marcadores">
-            <div className="aaa">
-
-            <NoteItem value="React" />
-            <NoteItem isNew placeholder="Novo marcador"/>
-            </div>
-         </Section>
+         <SummarySinapse content="Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se..."/>
       </Container>
    )
 }
