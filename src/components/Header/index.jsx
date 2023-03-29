@@ -12,7 +12,7 @@ export function Header() {
          </RocketMovies>
 
          <Search>
-            <Input placeholder="Search by title" />
+            <Input placeholder="Pesquisar pelo título" />
          </Search>
 
          <Profile>

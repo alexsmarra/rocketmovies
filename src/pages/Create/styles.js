@@ -16,11 +16,28 @@ export const Container = styled.div`
       font-size: 3.6rem;
    }
 
-   .aaa {
+   > section {
+      padding: 2.4rem 12.3rem;
+
       display: flex;
-      /* justify-content: space-between; */
-      flex-wrap: wrap;
-      gap: 3rem;
+      justify-content: space-between;
+
+      > button {
+         width: 20.7rem;
+      }
+   }
+
+   > main {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
+      
+      padding: 2.4rem 12.3rem;
+      
+      margin: 0 12.3rem 1rem;
+   }
+
+   > main:nth-child(5) {
+      margin-bottom: 5.8rem;
+
    }
 `
 
