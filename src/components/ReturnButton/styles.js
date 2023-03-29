@@ -5,7 +5,12 @@ export const Container = styled.span`
    align-items: center;
    gap: 1rem;
 
+   color: ${({ theme }) => theme.COLORS.PINK};
+
    svg {
       color: ${({ theme }) => theme.COLORS.PINK};
+
+      width: 1.6rem;
+      height: 1.6rem;
    }
 `

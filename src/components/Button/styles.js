@@ -6,11 +6,12 @@ export const Container = styled.button`
 
    width: 100%;
    height: 5.6rem;
-   padding: 0 14.5rem;
-   margin-top: 2.4rem;
    border-radius: 10px;
    border: 0;
    font-weight: 500;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
    &:disabled {
       opacity: .5;

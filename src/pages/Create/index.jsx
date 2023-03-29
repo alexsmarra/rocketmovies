@@ -4,7 +4,7 @@ import { Header } from '../../components/Header'
 
 import { SummarySinapse } from '../../components/SummarySinapse'
 
-export function Details() {
+export function Create() {
    return (
       <Container>
          <Header />
