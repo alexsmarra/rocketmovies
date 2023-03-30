@@ -13,7 +13,7 @@ export const Container = styled.div`
    "content";
 
    h1 {
-      font-size: 3.6rem;
+      font-size: 2.4rem;
       font-weight: 400;
       color: ${({ theme }) => theme.COLORS.PINK};
    }
@@ -27,6 +27,7 @@ export const Container = styled.div`
 
       > h1 {
          color: ${({ theme }) => theme.COLORS.WHITE};
+         font-size: 3.6rem;
       }
 
       > button {
@@ -71,7 +72,7 @@ export const Container = styled.div`
       > div {
          background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
 
-         padding: 2.4rem 12.3rem;
+         padding: 2.4rem 6.3rem;
          border-radius: 16px;
 
          display: flex;
@@ -84,6 +85,7 @@ export const Container = styled.div`
          gap: .5rem;
 
          margin-top: 1rem;
+         margin-bottom: 1rem;
 
          svg {
             width: 15px;
