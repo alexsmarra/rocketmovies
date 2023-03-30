@@ -2,15 +2,15 @@ import { Container } from './styles'
 
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-export function Stars({ title }) {
+export function Stars({ title, ...rest }) {
    return (
       <Container>
             <h2>{title}</h2>
-            <div>
-               <AiFillStar className='a'/>
-               <AiFillStar/>
-               <AiFillStar/>
-               <AiFillStar/>
+            <div {...rest}>
+               <AiFillStar />
+               <AiFillStar />
+               <AiFillStar />
+               <AiFillStar />
                <AiOutlineStar />
             </div>
       </Container>

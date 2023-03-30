@@ -14,30 +14,92 @@ export const Container = styled.div`
 
    h1 {
       font-size: 3.6rem;
+      font-weight: 400;
+      color: ${({ theme }) => theme.COLORS.PINK};
    }
 
    > section {
       padding: 2.4rem 12.3rem;
+      margin: 2rem 0;
 
       display: flex;
       justify-content: space-between;
 
+      > h1 {
+         color: ${({ theme }) => theme.COLORS.WHITE};
+      }
+
       > button {
          width: 20.7rem;
+
+         > svg {
+            font-size: 26px;
+            margin-right: 6px;
+         }
       }
    }
 
    > main {
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MAIN};
       
-      padding: 2.4rem 12.3rem;
+      /* padding: 2.4rem 12.3rem; */
       
-      margin: 0 12.3rem 1rem;
-   }
+      margin: 0 12.3rem 5.8rem;
 
-   > main:nth-child(5) {
-      margin-bottom: 5.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
 
+      overflow-y: auto;
+      
+      ::-webkit-scrollbar-track {
+         background: none;
+      }
+
+      ::-webkit-scrollbar {
+         width: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background-color: ${({theme})=> theme.COLORS.PINK}; 
+         border-radius: 8px; 
+         border: none; 
+      }
+      
+
+
+      > div {
+         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
+
+         padding: 2.4rem 12.3rem;
+         border-radius: 16px;
+
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
+
+      > div .stars {
+         display: flex;
+         gap: .5rem;
+
+         margin-top: 1rem;
+
+         svg {
+            width: 15px;
+            height: 15px;
+         }
+      }
+
+      > div .tags {
+         margin-top: 1.5rem;
+         display: flex;
+         gap: 1rem;
+      }
+
+      > div .tags span {
+         background: ${({ theme }) => theme.COLORS.BACKGROUND_TAGS};
+      }
    }
 `
 
