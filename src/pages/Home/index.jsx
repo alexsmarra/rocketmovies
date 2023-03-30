@@ -9,7 +9,7 @@ import { Tag } from '../../components/Tag'
 import { BiPlus  } from "react-icons/bi";
 
 
-export function Create() {
+export function Home() {
    return (
       <Container>
          <Header />
