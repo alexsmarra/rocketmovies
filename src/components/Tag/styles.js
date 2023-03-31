@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.span`
-   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_TAGS};
+   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
    color: ${({ theme }) => theme.COLORS.COLOR_TAGS};
 
    padding: .8rem 1.6rem;

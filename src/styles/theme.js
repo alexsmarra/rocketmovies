@@ -5,7 +5,6 @@ export default {
       BACKGROUND_DEEP_BLACK: '#0D0C0F',
       BACKGROUND_ELEMENTS: '#312E38',
       BACKGROUND_MATTE: '#272024',
-      BACKGROUND_TAGS: '#312E38',
       
       COLOR_TAGS: '#E5E5E5',
       COLOR_BORDERS: '#3E3B47',

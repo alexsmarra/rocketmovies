@@ -6,6 +6,11 @@ export const Container = styled.div`
       font-size: 2.4rem;
    }
 
+   div {
+      display: flex;
+      gap: .4rem;
+   }
+
    > div svg {
       color: ${({ theme }) => theme.COLORS.PINK};
       

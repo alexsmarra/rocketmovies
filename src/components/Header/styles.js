@@ -10,7 +10,7 @@ export const Container = styled.header`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 2.4rem 12.3rem;
+   padding: 6.4rem 12.3rem;
 `
 
 export const RocketMovies = styled.div`

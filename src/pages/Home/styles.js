@@ -100,7 +100,7 @@ export const Container = styled.div`
       }
 
       > div .tags span {
-         background: ${({ theme }) => theme.COLORS.BACKGROUND_TAGS};
+         background: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
       }
    }
 `

@@ -12,7 +12,7 @@ export default createGlobalStyle`
    }
 
    body {
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PURE_BLACK};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MAIN};
       color: ${({ theme }) => theme.COLORS.WHITE};
       -webkit-font-smoothing: antialiased;
    }

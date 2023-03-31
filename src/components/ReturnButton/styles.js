@@ -4,6 +4,7 @@ export const Container = styled.span`
    display: flex;
    align-items: center;
    gap: 1rem;
+   cursor: pointer;
 
    color: ${({ theme }) => theme.COLORS.PINK};
 
