@@ -36,7 +36,7 @@ export function Create() {
                   <Section title='Marcadores'>
                      <div>
                         <NoteItem value='React'/>
-                        <NoteItem isNew value='Novo marcador'/>
+                        <NoteItem isNew placeholder='Novo marcador'/>
                      </div>
                   </Section>
                </div>

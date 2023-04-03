@@ -64,6 +64,10 @@ export const Container = styled.div`
 
          > div:nth-child(2) {
             width: 20.3rem;
+
+            > input::placeholder {
+               color: ${({ theme }) => theme.COLORS.GRAY};
+            }
          }
 
          > div {
