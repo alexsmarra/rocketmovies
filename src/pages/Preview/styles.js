@@ -19,6 +19,7 @@ export const Container = styled.div`
       
       overflow-y: auto;
       scroll-behavior: smooth;
+
       ::-webkit-scrollbar-track {
          background: none;
       }
@@ -34,9 +35,8 @@ export const Container = styled.div`
       }
 
       ::-webkit-scrollbar-thumb:vertical {
-  height: 5px;
-
-   }
+         height: 5px;
+      }
 
    header.cabecalho {
       display: flex;
@@ -102,6 +102,6 @@ export const Container = styled.div`
             padding-right: 20px;
          }
    }
-   
+}
 `
 
