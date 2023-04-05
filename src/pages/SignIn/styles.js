@@ -10,20 +10,21 @@ export const Container = styled.div`
 
 export const Form = styled.form`
    display: flex;
-   flex: .7;
+   flex: .4;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   text-align: center;
+   /* text-align: center; */
    gap: 4.8rem;
    margin-top: -5rem;
+   padding: 0 13.6rem;
 
    .header {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 34rem;
       text-align: start;
-      padding: 0 13.6rem;
+      /* padding: 0 13.6rem; */
 
       > h1 {
          font-size: 4.8rem;
@@ -31,13 +32,14 @@ export const Form = styled.form`
 
       > p {
          font-size: 1.4rem;
+         color: ${({ theme }) => theme.COLORS.LIGHT_GRAY};
          margin-bottom: 4.8rem;
       }
    }
 
    .inputs-and-btn {
-      padding: 0 13.6rem;
-      width: 100%;
+      /* padding: 0 13.6rem; */
+      width: 34rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -54,7 +56,7 @@ export const Form = styled.form`
 
 export const Background = styled.div`
    flex: 1;
-   background: url(${movietheater}) no-repeat center center;
+   background: url(${movietheater}) no-repeat center;
    background-size: cover;
    opacity: .4;
 `
