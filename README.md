@@ -1,4 +1,4 @@
-# rocketmovies
+# Rocketmovies
 Rocketmovies frontend challenge with reactJS, by stage 9 of Rocketseat's course
 
 <img width="1680" alt="signin" src="https://user-images.githubusercontent.com/61237811/230136116-fe4429ec-55b0-4763-b42c-f885cd050037.png">
