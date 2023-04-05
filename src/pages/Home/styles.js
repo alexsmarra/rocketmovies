@@ -30,13 +30,14 @@ export const Container = styled.div`
          font-size: 3.6rem;
       }
 
-      > button {
+      a {
          width: 20.7rem;
 
-         > svg {
-            font-size: 26px;
-            margin-right: 6px;
-         }
+      }
+
+      a > button > svg {
+         font-size: 26px;
+         margin-right: 6px;
       }
    }
 
@@ -100,7 +101,7 @@ export const Container = styled.div`
       }
 
       > div .tags span {
-         background: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
+         background: ${({ theme }) => theme.COLORS.DARK_GRAY};
       }
    }
 `

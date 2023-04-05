@@ -1,5 +1,7 @@
 import { Container } from './styles'
 
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Button } from '../../components/Button'
 import { Stars } from '../../components/Stars'
@@ -16,7 +18,7 @@ export function Home() {
          
          <section>
             <h1>Meus filmes</h1>
-            <Button icon={BiPlus} title="Adicionar filme" />
+            <Link to='/create'><Button icon={BiPlus} title="Adicionar filme"></Button></Link>
          </section>
          
          <main>

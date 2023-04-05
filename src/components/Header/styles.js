@@ -15,7 +15,7 @@ export const Container = styled.header`
 
 export const RocketMovies = styled.div`
    h1 {
-
+      font-weight: 700;
    }
 `
 

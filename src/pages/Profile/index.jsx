@@ -1,5 +1,7 @@
 import { Container, Form, Avatar } from './styles'
 
+import { Link } from 'react-router-dom'
+
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { ReturnButton } from '../../components/ReturnButton'
@@ -13,7 +15,7 @@ export function Profile() {
    return (
       <Container>
          <header>
-           <a href="#"><ReturnButton title='Voltar'/></a>
+           <Link to="/"><ReturnButton title='Voltar'/></Link>
          </header>
 
          <Form>

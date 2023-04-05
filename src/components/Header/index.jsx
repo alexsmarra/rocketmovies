@@ -8,7 +8,7 @@ export function Header() {
    return (
       <Container>
          <RocketMovies>
-            <a href="#"><h1>RocketMovies</h1></a>
+            <Link to="/"><h1>RocketMovies</h1></Link>
          </RocketMovies>
 
          <Search>
@@ -21,7 +21,7 @@ export function Header() {
                <span>sair</span>
             </div>
 
-            <a href='#'><img src="https://github.com/alexsmarra.png" alt="User img" /></a>
+            <Link to='/profile'><img src="https://github.com/alexsmarra.png" alt="User img" /></Link>
          </Profile>
       </Container>
    )

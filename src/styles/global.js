@@ -25,6 +25,7 @@ export default createGlobalStyle`
 
    h1 {
       color: ${({ theme }) => theme.COLORS.PINK}; 
+      font-size: 2.4rem;
    }
    
    a {

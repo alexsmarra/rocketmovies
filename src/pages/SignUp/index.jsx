@@ -1,17 +1,18 @@
 import { Container, Form, Background } from './styles.js'
 
+import { Link } from 'react-router-dom'
+
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { ReturnButton } from '../../components/ReturnButton'
 
 import { AiOutlineMail,  } from "react-icons/ai";
-import { BiLockAlt, BiUser } from "react-icons/bi";
+import { BiLockAlt } from "react-icons/bi";
+import { FiUser } from 'react-icons/fi'
 
 export function SignUp() {
    return (
       <Container>
-         <Background />
-
          <Form>
             <div className='header'>
                <h1>RocketMovies</h1>
@@ -20,14 +21,16 @@ export function SignUp() {
             </div>
             
             <div className='inputs-and-btn'>
-               <Input icon={BiUser} placeholder='Nome'/>
+               <Input icon={FiUser} placeholder='Nome'/>
                <Input icon={AiOutlineMail} placeholder='E-mail'/>
                <Input icon={BiLockAlt} placeholder='Senha'/>
-               <Button title='Cadastrar'/>
+               <Button title='Entrar'/>
             </div>
 
-            <a href="#"><ReturnButton title="Voltar para o login"/></a>
+            <Link to="/signin"><ReturnButton title="Voltar para o login"/></Link>
          </Form>
+
+         <Background />
       </Container>
 
 

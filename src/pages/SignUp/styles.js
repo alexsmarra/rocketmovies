@@ -49,7 +49,7 @@ export const Form = styled.form`
       }
    }
 
-   a {
+   > a {
       color: ${({ theme }) => theme.COLORS.PINK};
    }
 `

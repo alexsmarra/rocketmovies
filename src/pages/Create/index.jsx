@@ -1,5 +1,7 @@
 import { Container } from './styles.js'
 
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { ReturnButton } from '../../components/ReturnButton'
 import { Input } from '../../components/Input'
@@ -14,9 +16,11 @@ export function Create() {
          <Header />
          
          <main>
+         <Link to='/'>
             <div className="btn">
                <ReturnButton title="Voltar" />
             </div>
+         </Link>
 
             <div className='title'>
                <h2>Novo filme</h2>

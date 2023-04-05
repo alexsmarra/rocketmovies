@@ -1,5 +1,7 @@
 import { Container } from './styles'
 
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 
 import { ReturnButton } from '../../components/ReturnButton'
@@ -16,9 +18,11 @@ export function Preview() {
       <Container>
          <Header />
 
-         <div className="btn">
-            <ReturnButton title="Voltar" />
-         </div>
+         <Link to='/'>
+            <div className="btn">
+               <ReturnButton title="Voltar" />
+            </div>
+         </Link>
 
          <main>
             <header className='cabecalho'>
