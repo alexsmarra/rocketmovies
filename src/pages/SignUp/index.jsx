@@ -15,7 +15,7 @@ export function SignUp() {
       <Container>
          <Form>
             <div className='header'>
-               <h1>RocketMovies</h1>
+               <Link to='/'><h1>RocketMovies</h1></Link>
                <p>Aplicação para acompanhar tudo que assistir</p>
                <h2>Crie sua conta</h2>
             </div>

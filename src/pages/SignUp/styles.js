@@ -26,7 +26,7 @@ export const Form = styled.form`
       text-align: start;
       /* padding: 0 13.6rem; */
 
-      > h1 {
+      > a h1 {
          font-size: 4.8rem;
       }
 
