@@ -15,19 +15,38 @@ export function SignUp() {
       <Container>
          <Form>
             <div className='header'>
-               <Link to='/'><h1>RocketMovies</h1></Link>
+               <Link to='/'>
+                  <h1>RocketMovies</h1>
+               </Link>
+
                <p>Aplicação para acompanhar tudo que assistir</p>
                <h2>Crie sua conta</h2>
             </div>
             
             <div className='inputs-and-btn'>
-               <Input icon={FiUser} placeholder='Nome'/>
-               <Input icon={AiOutlineMail} placeholder='E-mail'/>
-               <Input icon={BiLockAlt} placeholder='Senha'/>
-               <Button title='Entrar'/>
+               <Input 
+                  icon={FiUser} 
+                  placeholder='Nome'
+               />
+
+               <Input 
+                  icon={AiOutlineMail} 
+                  placeholder='E-mail'
+               />
+
+               <Input 
+                  icon={BiLockAlt} 
+                  placeholder='Senha'
+               />
+
+               <Button 
+                  title='Entrar'
+               />
             </div>
 
-            <Link to="/signin"><ReturnButton title="Voltar para o login"/></Link>
+            <Link to="/signin">
+               <ReturnButton title="Voltar para o login"/>
+            </Link>
          </Form>
 
          <Background />

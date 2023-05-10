@@ -60,3 +60,6 @@ export const Background = styled.div`
    background-size: cover;
    opacity: .4;
 `
+
+
+

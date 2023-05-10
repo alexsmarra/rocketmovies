@@ -1,20 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-   h2 {
-      font-weight: 700;
-      font-size: 2.4rem;
-   }
+   width: 100%;
+   height: 30px;
+   
+   color: ${({ theme }) => theme.COLORS.PINK};
+   font-size: 12px;
 
-   div {
-      display: flex;
-      gap: .4rem;
-   }
-
-   > div svg {
-      color: ${({ theme }) => theme.COLORS.PINK};
-      
-      width: 1.2rem;
-      height: 1.2rem;
-   }
+   display: flex;
+   gap: 6px;
 `
+
+
+   

@@ -19,9 +19,19 @@ export function SignIn() {
             </div>
             
             <div className='inputs-and-btn'>
-               <Input icon={AiOutlineMail} placeholder='E-mail'/>
-               <Input icon={BiLockAlt} placeholder='Senha'/>
-               <Button title='Entrar'/>
+               <Input 
+                  icon={AiOutlineMail} 
+                  placeholder='E-mail'
+               />
+
+               <Input 
+                  icon={BiLockAlt} 
+                  placeholder='Senha'
+               />
+
+               <Button 
+                  title='Entrar'
+               />
             </div>
 
             <Link to="/signup">Criar conta</Link>
@@ -29,7 +39,59 @@ export function SignIn() {
 
          <Background />
       </Container>
-
-
    )
 }
+
+////////////////////////////////////////////////////
+
+export function SingIn(){
+   const [email, setEmail] = useState('') //o nome do estado || função que atualiza o estado
+   const [password, setPassword] = useState('')
+  
+    const {signIn} = useAuth()
+  
+   function handleSignIn(){
+     signIn({email, password})
+    }
+  
+  
+    return(
+      <Container>
+        <Form>
+  
+        <h1>RocketMovies</h1>
+        <p>Aplicação para acompanhar tudo que assistir.</p>
+  
+          <h2>Faça seu login</h2>
+  
+          <Input
+          type='text'
+          icon={FiMail}
+          placeholder= "E-mail"
+          onChange = { e => setEmail(e.target.value)}/>
+  
+          <Input
+          type='password'
+          icon={FiLock}
+          placeholder= "Senha"
+          onChange= {e => setPassword(e.target.value)}/>
+  
+          <Button
+          title='Entrar'
+          onClick= {handleSignIn}/>
+  
+        <div className="buttonNewAccount">
+  
+          <ButtonText
+          to= "/register"
+          title='Criar conta'
+          />
+  
+        </div>
+  
+        </Form>
+  
+        <Background/>
+      </Container>
+    )
+  }

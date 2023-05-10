@@ -1,18 +1,24 @@
 import { Container } from './styles'
 
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { FiStar } from 'react-icons/fi'
+import { AiFillStar } from 'react-icons/ai'
 
-export function Stars({ title, ...rest }) {
+export function Stars({ rating }) {
+   if(!rating) {
+      return null
+   }
+
+   let stars = []
+
+   for(let cont = 1; cont <= 5; cont++) {
+      if(cont > rating) {
+         stars.push(<FiStar key={cont} />)
+      } else {
+         stars.push(<AiFillStar key={cont} />)
+      }
+   }
+
    return (
-      <Container>
-            <h2>{title}</h2>
-            <div {...rest}>
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiOutlineStar />
-            </div>
-      </Container>
+      <Container>{stars}</Container>
    )
 }

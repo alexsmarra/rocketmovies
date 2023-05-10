@@ -1,75 +1,48 @@
-import { Container } from './styles'
-
-import { Link } from 'react-router-dom'
+import { Container, AddMovie, Wrapper, Content } from './styles'
 
 import { Header } from '../../components/Header'
 import { Button } from '../../components/Button'
-import { Stars } from '../../components/Stars'
-import { SummarySinapse } from '../../components/SummarySinapse'
-import { Tag } from '../../components/Tag'
+import { NoteOfMovie } from '../../components/NoteOfMovie'
 
-import { BiPlus  } from "react-icons/bi";
+import { FiPlus } from "react-icons/fi";
 
 
 export function Home() {
    return (
       <Container>
-         <Header />
-         
-         <section>
+         <Header 
+
+         />
+      
+         <AddMovie>
             <h1>Meus filmes</h1>
-            <Link to='/create'><Button icon={BiPlus} title="Adicionar filme"></Button></Link>
-         </section>
+
+            <Wrapper to='/create'>
+               <Button 
+                  icon={FiPlus} 
+                  title="Adicionar filme">
+               </Button>
+            </Wrapper>
+         </AddMovie>
          
-         <main>
-            <div>
-               <Stars className='stars' title="Rocky: Um Lutador" />
-               <SummarySinapse content="Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne."/>
-               <div className='tags'>
-                  <Tag title="Ação" />
-                  <Tag title="Drama" />
-                  <Tag title="Superação" />
-               </div>
-            </div>
-
-            <div>
-               <Stars className='stars' title="Rocky: Um Lutador" />
-               <SummarySinapse content="Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne."/>
-               <div className='tags'>
-                  <Tag title="Ação" />
-                  <Tag title="Drama" />
-                  <Tag title="Superação" />
-               </div>
-            </div>
-
-            <div>
-               <Stars className='stars' title="Rocky: Um Lutador" />
-               <SummarySinapse content="Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne."/>
-               <div className='tags'>
-                  <Tag title="Ação" />
-                  <Tag title="Drama" />
-                  <Tag title="Superação" />
-               </div>
-            </div>
-            <div>
-               <Stars className='stars' title="Rocky: Um Lutador" />
-               <SummarySinapse content="Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne."/>
-               <div className='tags'>
-                  <Tag title="Ação" />
-                  <Tag title="Drama" />
-                  <Tag title="Superação" />
-               </div>
-            </div>
-            <div>
-               <Stars className='stars' title="Rocky: Um Lutador" />
-               <SummarySinapse content="Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne."/>
-               <div className='tags'>
-                  <Tag title="Ação" />
-                  <Tag title="Drama" />
-                  <Tag title="Superação" />
-               </div>
-            </div>
-         </main>
+         <Content>
+            <main>
+               <NoteOfMovie data={
+                  {
+                     title: "Rocky Balboa",
+                     rating: "4",
+                     description: `Um campeão ofendido por Rocky o desafia para uma luta, e para a surpresa de todos, Balboa aceita, saindo da aposentadoria e começando um intensivo treinamento para voltar ao ringue uma última vez. 
+                     Toda a saga do pugilista Rocky Balboa está intimamente ligada a biografia pessoal de autor e intérprete Sylvester Stallone. Desde o primeiro filme – Rocky: Um Lutador (1976) – em que ele também ascendia para o estrelato, passando pelos volumes três e cinco, na popularidades descerebrada de um e na decadência do outro. 
+                     Rocky Balboa, o sexto volume da franquia, resgata seu astro a uma reverência que lhe é merecida, dado todo o esforço que fez durante sua carreira.`,
+                     tags: [
+                        {id: "1", name: "ação"},
+                        {id: "2", name: "drama"}
+                     ]
+                  }
+               }
+               />
+            </main>
+         </Content>
       </Container>
    )
 }
