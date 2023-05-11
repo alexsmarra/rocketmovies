@@ -2,30 +2,41 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
    display: flex;
+   /* gap: 16px; */
    align-items: center;
 
-   padding: 8px;
+   width: auto;
+   height: 5.6rem;
 
-   background-color: ${({ theme, isNew }) => isNew ? 'transparent' : theme.COLORS.DARK_GRAY};
-   /* color: ${({ theme, isNew }) => isNew ? theme.COLORS.DARK_GRAY : 'white'}; */
-
-   border: ${({ isNew, theme }) => isNew ? `3px dashed ${theme.COLORS.GRAY}` : 'none'};
+   padding: ${({ isNew }) => !isNew ? "16px" : "26px 16px"};
    border-radius: 10px;
 
-   > input {
-      color: white;
-      background: transparent;
+   background-color: ${({ theme, isNew }) => isNew ? 'transparent' : theme.COLORS.DARK_GRAY};
 
-      width: 100%;
+   border: ${({ isNew, theme }) => isNew ? `3px dashed ${theme.COLORS.GRAY}` : 'none'};
+
+   > input {
+      color: ${({ theme }) => theme.COLORS.WHITE};
+      background: transparent;
+      width: ${({ isNew }) => !isNew ? "130px" : "160px"};
       height: 5.6rem;
+      
       border: none;
+      border-radius: 10px;
+      padding: 12px;
 
       font-size: 1.6rem;
+
+      &::placeholder {
+         color: ${({ theme }) => theme.COLORS.GRAY};
+      }
+
    }
 
    button {
       background: transparent;
       color: ${({ theme }) => theme.COLORS.PINK};
       border: none;
+      line-height: 24px;
    }
 `

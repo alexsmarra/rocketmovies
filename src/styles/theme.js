@@ -16,6 +16,5 @@ export default {
       LIGHTNESS_GRAY: '#999591',
       GRAY: '#948F99',
       DARK_GRAY: '#262529',
-
    }  
 }

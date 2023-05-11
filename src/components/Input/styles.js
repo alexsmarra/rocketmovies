@@ -26,12 +26,12 @@ export const Container = styled.div`
       background: transparent;
       
       border: 0;
-      padding: 12px;
+      padding: 12px 12px 12px 26px;
 
       color: ${({ theme }) => theme.COLORS.WHITE};
 
       &::placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY};
+         color: ${({ theme }) => theme.COLORS.GRAY};
       }
    }
 `

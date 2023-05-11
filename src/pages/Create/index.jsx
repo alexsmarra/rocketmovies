@@ -1,4 +1,4 @@
-import { Container } from './styles.js'
+import { Container, Content } from './styles.js'
 
 import { Link } from 'react-router-dom'
 
@@ -16,40 +16,56 @@ export function Create() {
          <Header />
          
          <main>
-         <Link to='/'>
-            <div className="btn">
-               <ReturnButton title="Voltar" />
-            </div>
-         </Link>
+            <Content>
+               <Link to='/'>
+                  <div className="return-btn-div">
+                     <ReturnButton title="Voltar" />
+                  </div>
+               </Link>
 
-            <div className='title'>
-               <h2>Novo filme</h2>
-            </div>
-
-            <form action="">
-               <div className='inputs'>
-                  <Input type='text' placeholder='Título' />
-                  <Input type='number' placeholder='Sua nota (de 0 a 5)' />
+               <div className='new-movie'>
+                  <h2>Novo filme</h2>
                </div>
 
-               <div className='textarea'>
-                  <Textarea placeholder='Observações'/>
+               <div className="info">
+                  <div className='inputs'>
+                     <Input 
+                        value={""}
+                        type='text' 
+                        placeholder='Título' 
+                        onChange={""}   
+                     />
+                     <Input
+                        value={""}
+                        type='number' 
+                        placeholder='Sua nota (de 0 a 5)' 
+                        onChange={""}   
+                     />
+                  </div>
+
+                  <div className='textarea'>
+                     <Textarea 
+                        value={""}
+                        placeholder='Observações'
+                        onChange={""}   
+                     />
+                  </div>
                </div>
 
-               <div className='section'>
-                  <Section title='Marcadores'>
-                     <div>
-                        <NoteItem value='React'/>
-                        <NoteItem isNew placeholder='Novo marcador'/>
-                     </div>
-                  </Section>
-               </div>
+                  <div className='section'>
+                     <Section title='Marcadores'>
+                        <div className="markers">
+                           <NoteItem value='React'/>
+                           <NoteItem isNew placeholder='Novo marcador'/>
+                        </div>
+                     </Section>
+                  </div>
 
-               <div className='btns'>
-                  <Button title='Excluir filme'/>
-                  <Button title='Salvar alterações'/>
-               </div>
-            </form>
+                  <footer>
+                     <Button title='Excluir filme'/>
+                     <Button title='Salvar alterações'/>
+                  </footer>
+            </Content>
          </main>
       </Container>
    )

@@ -2,7 +2,7 @@ import { Container } from './styles'
 
 import { ImPlus, ImCross } from "react-icons/im";
 
-export function NoteItem({ isNew, value, onClick, ...rest }) {
+export function NoteItem({ isNew = false, value, onClick, ...rest }) {
    return (
       <Container isNew={isNew}>
          <input 
