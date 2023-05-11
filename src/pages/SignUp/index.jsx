@@ -44,7 +44,7 @@ export function SignUp() {
                />
             </div>
 
-            <Link to="/signin">
+            <Link to="/">
                <ReturnButton title="Voltar para o login"/>
             </Link>
          </Form>
