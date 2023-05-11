@@ -5,7 +5,7 @@ export const Container = styled.div`
    height: 30px;
    
    color: ${({ theme }) => theme.COLORS.PINK};
-   font-size: 12px;
+   font-size: 13px;
 
    display: flex;
    gap: 6px;

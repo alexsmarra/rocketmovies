@@ -7,8 +7,7 @@ background: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 32px;
-gap: 15px;
+padding: 42px;
 
 border-radius: 16px;
 
@@ -35,7 +34,7 @@ gap: 8px;
   }
 }
 
-> main{
+  main {
 
   > p {
     overflow: hidden;
@@ -46,7 +45,7 @@ gap: 8px;
 
     text-align: justify;
 
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
+    color: ${({ theme }) => theme.COLORS.LIGHTNESS_GRAY};
 
     font-weight: 400;
     font-size: 16px;
@@ -54,13 +53,9 @@ gap: 8px;
   }
 }
 
->footer{
+  footer{
     margin-top: 40px;
     display: flex;
     gap: 8px;
-
-    div {
-      background: ${({ theme }) => theme.COLORS.GRAY_600};
-    }
 }
 `

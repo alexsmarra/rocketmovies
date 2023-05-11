@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 120px 116px auto;
+  grid-template-rows: 120px 146px auto;
   grid-template-areas:
     'header'
     'addmovie'
@@ -31,14 +31,18 @@ export const AddMovie = styled.div`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  > button {
+  > a {
     width: 207px;
-    height: 48px;
+
+    button {
+      font-size: 17px;
+      font-weight: 400;
+    }
   }
 
   svg {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     margin-right: 1rem;
   }
 `
@@ -46,7 +50,7 @@ export const AddMovie = styled.div`
 export const Content = styled.div`
   grid-area: main;
 
-  margin: 40px 40px 40px 40px;
+  /* margin: 40px 40px 40px 40px; */
   
 
   > main {
@@ -62,7 +66,6 @@ export const Content = styled.div`
   margin: 0 106px 40px 123px;
   overflow-y: auto;
 
-
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -77,8 +80,4 @@ export const Content = styled.div`
     border: none;
   }
 }
-`
-
-export const Wrapper = styled(Link)`
-  width: 207px;
 `

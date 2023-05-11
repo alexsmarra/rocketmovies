@@ -13,7 +13,9 @@ export default {
       BLACK: '#000000',
       PINK: '#FF859B',
       LIGHT_GRAY: '#CAC4CF',
+      LIGHTNESS_GRAY: '#999591',
       GRAY: '#948F99',
-      DARK_GRAY: '#262529'
+      DARK_GRAY: '#262529',
+
    }  
 }
