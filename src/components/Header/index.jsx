@@ -12,7 +12,10 @@ export function Header() {
          </RocketMovies>
 
          <Search>
-            <Input placeholder="Pesquisar pelo título" />
+            <Input 
+               placeholder="Pesquisar pelo título" 
+               onChange={""}
+            />
          </Search>
 
          <Profile>

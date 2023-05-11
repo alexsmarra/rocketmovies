@@ -21,36 +21,37 @@ transition: all 0.3s;
   cursor: pointer;
 }
 
-> header {
+  > a header {
 
-display: flex;
-flex-direction: column;
-gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-> h2 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
+    > h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: white;
+    }
   }
-}
 
   main {
 
-  > p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    > p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
 
-    text-align: justify;
+      text-align: justify;
 
-    color: ${({ theme }) => theme.COLORS.LIGHTNESS_GRAY};
+      color: ${({ theme }) => theme.COLORS.LIGHTNESS_GRAY};
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-  }
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
 }
 
   footer{
