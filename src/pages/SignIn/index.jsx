@@ -21,11 +21,13 @@ export function SignIn() {
             <div className='inputs-and-btn'>
                <Input 
                   icon={AiOutlineMail} 
+                  type='email'
                   placeholder='E-mail'
                />
 
                <Input 
                   icon={BiLockAlt} 
+                  type='password'
                   placeholder='Senha'
                />
 
