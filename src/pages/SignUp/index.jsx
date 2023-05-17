@@ -4,10 +4,11 @@ em tempo real digitada pelo usuário, importamos o useState, que é um hook para
 possamos criar estados, e na primeira parte da nossa function SignUp, criaremos as nossas constantes
 de estados e de setar estados, tanto para nome, email e senha */
 import { useState } from 'react'
+import { api } from '../../services/api'
 
 import { Container, Form, Background } from './styles.js'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
@@ -17,22 +18,40 @@ import { AiOutlineMail,  } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 import { FiUser } from 'react-icons/fi'
 
-
-
 export function SignUp() {
-
-   /* Podemos acessar o estado atual (primeira const), como também uma function que altera o valor 
-   atual do estado (segunda const), os nomes nós que escolhemos. Para cada input, passaremos a
-   function onChange para capturar os dados digitados pelo usuário, e criaremos a function 
-   handleSignUp (para colocar no button de nosso <Form/>) para lidar com esses eventos de cada 
-   input */
+   /* Podemos acessar o estado atual (primeira const de useState abaixo), como também uma 
+   function que altera o valor atual do estado (segunda const), os nomes nós que escolhemos. 
+   Para cada input, passaremos a function onChange para capturar os dados digitados pelo usuário, 
+   e criaremos a function handleSignUp (para colocar no button de nosso <Form/>) para lidar com 
+   esses eventos de cada input */
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [password, setPassword] = useState("")
 
+   const navigate = useNavigate()
+
    function handleSignUp() {
-      console.log(name, email, password)
+      if(!name || !email || !password) {
+         return alert("Preencha todos os campos!")
+      }
+
+      api.post("/users", { name, email, password })
+      /* com o ".then()" e o ".catch()" não precisamos do async await, pq é uma promise, uma 
+      callback */
+      .then(() => {
+         alert("Usuário cadastrado com sucesso!")
+         navigate("/")
+      }) 
+      .catch(error => {
+         if(error.response) {
+            // pega do AppError
+            alert(error.response.data.message)
+         } else {
+            alert("Não foi possível cadastrar!")
+         }
+      })
    }
+
 
    return (
       <Container>
