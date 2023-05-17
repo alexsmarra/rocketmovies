@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { MyContext } from '../../myContext.js'
+import { useAuth } from '../../hooks/auth'
 
 import { Container, Form, Background } from './styles.js'
 
@@ -12,7 +11,7 @@ import { AiOutlineMail,  } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 
 export function SignIn() {
-   const data = useContext(MyContext)
+   const data = useAuth()
    console.log("Meu contexto: ", data)
 
    return (
