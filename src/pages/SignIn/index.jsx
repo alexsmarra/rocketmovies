@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { MyContext } from '../../myContext.js'
+
 import { Container, Form, Background } from './styles.js'
 
 import { Link } from 'react-router-dom'
@@ -9,6 +12,9 @@ import { AiOutlineMail,  } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 
 export function SignIn() {
+   const data = useContext(MyContext)
+   console.log("Meu contexto: ", data)
+
    return (
       <Container>
          <Form>
