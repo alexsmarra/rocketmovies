@@ -39,6 +39,25 @@ function AuthProvider({ children }) {
       setData({})
    }
 
+   async function updateProfile({ user }) {
+      try {
+         await api.put("/users", user)
+         /* nesse caso, o usuário já estará logado, então o setItem apenas renomeará, substituirá
+         o conteúdo, o token permanecerá o mesmo */
+         localStorage.setItem("@rocketmovies:user", JSON.stringify(user))
+
+         setData({ user, token: data.token })
+         alert("Perfil atualizado com sucesso!")
+
+      } catch(error) {
+         if(error.response) {
+            alert(error.response.data.message)
+         } else {
+            alert("Não foi possível atualizar o perfil")
+         }
+      }
+   }
+
    /* useEffect para buscar as informações do localStorage. Always leave closest to the return. 
    When we leave the [] empty, the app will be loader only once after rendering our component 
    (o app será carregado apenas uma vez após nosso componente ser renderizado, dessa forma, 
@@ -65,6 +84,7 @@ function AuthProvider({ children }) {
       <AuthContext.Provider value={{ 
          signIn, 
          signOut,
+         updateProfile,
          user: data.user
       }}
       >

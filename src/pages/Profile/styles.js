@@ -19,6 +19,11 @@ export const Container = styled.div`
       padding: 0 14.4rem;
 
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
+
+      > button {
+         background: none;
+         border: none;
+      }
    }
 `
 
