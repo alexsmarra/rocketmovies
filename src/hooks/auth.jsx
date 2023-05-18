@@ -19,8 +19,8 @@ function AuthProvider({ children }) {
 
          /* Inserindo um token do tipo Bearer, de autorização, no cabeçalho por padrão em todas as
          requisições que o usuário for fazer a partir de agora */
-         api.defaults.headers.authorization = `Bearer ${token}`
-         console.log(user, token)
+         api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
          setData({ user, token })
 
       } catch(error) {
@@ -51,7 +51,7 @@ function AuthProvider({ children }) {
       const user = localStorage.getItem("@rocketmovies:user")
       
       if(token && user) {
-         api.defaults.headers.authorization = `Bearer ${token}`
+         api.defaults.headers.common['Authorization'] = `Bearer ${token}`
    
          setData({
             token,
