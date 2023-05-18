@@ -32,7 +32,14 @@ function AuthProvider({ children }) {
       }
    }
 
-   /* useEffect para buscar as informações do localStorage. Always leave the closest to the return. 
+   function signOut() {
+      localStorage.removeItem("@rocketmovies:token")
+      localStorage.removeItem("@rocketmovies:user")
+
+      setData({})
+   }
+
+   /* useEffect para buscar as informações do localStorage. Always leave closest to the return. 
    When we leave the [] empty, the app will be loader only once after rendering our component 
    (o app será carregado apenas uma vez após nosso componente ser renderizado, dessa forma, 
    quando o usuário fizer o login e for direcionando para a page Home, se atualizarmos a tela, 
@@ -55,7 +62,12 @@ function AuthProvider({ children }) {
 
 
    return (
-      <AuthContext.Provider value={{ signIn, user: data.user }}>
+      <AuthContext.Provider value={{ 
+         signIn, 
+         signOut,
+         user: data.user
+      }}
+      >
          {children}
       </AuthContext.Provider>
    )
