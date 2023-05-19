@@ -18,15 +18,15 @@ export function Profile() {
 
    const [name, setName] = useState(user.name)
    const [email, setEmail] = useState(user.email)
-   const [oldPassword, setOldPassword] = useState()
-   const [newPassword, setNewPassword] = useState()
+   const [old_password, setOldPassword] = useState()
+   const [new_password, setNewPassword] = useState()
 
    async function handleUpdate() {
       const user = {
          name, 
          email,
-         oldPassword,
-         password: newPassword
+         old_password,
+         new_password
       }
 
       await updateProfile({ user })
