@@ -39,8 +39,18 @@ function AuthProvider({ children }) {
       setData({})
    }
 
-   async function updateProfile({ user }) {
+   async function updateProfile({ user, avatarFile }) {
       try {
+         if(avatarFile) {
+            // new FormData() pq precisamos no formato de aquivo
+            const fileUploadForm = new FormData()
+            // igual fizemos no Insomnia, na pasta Users / Patch / Avatar, mas aqui está em forma de código
+            fileUploadForm.append("avatar", avatarFile)
+
+            const response = await api.patch("/users/avatar", fileUploadForm)
+            user.avatar = response.data.avatar
+         }
+
          await api.put("/users", user)
          /* nesse caso, o usuário já estará logado, então o setItem apenas renomeará, substituirá
          o conteúdo, o token permanecerá o mesmo */

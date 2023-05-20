@@ -12,6 +12,7 @@ import { ReturnButton } from '../../components/ReturnButton'
 
 import { AiOutlineCamera, AiOutlineMail,  } from "react-icons/ai";
 import { BiLockAlt, BiUser } from "react-icons/bi";
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function Profile() {
    const { user, updateProfile } = useAuth()
@@ -21,6 +22,15 @@ export function Profile() {
    const [old_password, setOldPassword] = useState()
    const [new_password, setNewPassword] = useState()
 
+   // primeira condição é url que vai buscar a imagem do usuario no backend
+   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` 
+                                 : avatarPlaceholder
+
+   // para exibir o avatar de fato
+   const [avatar, setAvatar] = useState(avatarUrl)
+   // para guardar o arquivo selecionado
+   const [avatarFile, setAvatarFile] = useState(null)
+
    async function handleUpdate() {
       const user = {
          name, 
@@ -29,7 +39,16 @@ export function Profile() {
          new_password
       }
 
-      await updateProfile({ user })
+      await updateProfile({ user, avatarFile })
+   }
+
+   function handleChangeAvatar(event) {
+      // pegando o arquivo que o usuário colocou
+      const file = event.target.files[0]
+      setAvatarFile(file)
+
+      const imagePreview = URL.createObjectURL(file)
+      setAvatar(imagePreview)
    }
 
    const navigate = useNavigate()
@@ -52,10 +71,17 @@ export function Profile() {
 
          <Form>
             <Avatar>
-               <img src="https://github.com/alexsmarra.png" alt="user img" />
+               <img 
+                  src={avatar}
+                  alt="Foto do usuário"
+               />
                <label htmlFor="avatar">
                   <AiOutlineCamera />
-                  <input type="file" id="avatar" />
+                  <input 
+                     type="file" 
+                     id="avatar" 
+                     onChange={handleChangeAvatar}
+                  />
                </label>
             </Avatar>
 
