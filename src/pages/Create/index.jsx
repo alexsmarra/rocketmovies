@@ -1,5 +1,7 @@
 import { Container, Content } from './styles.js'
 
+import { useState } from "react"
+
 import { Link } from 'react-router-dom'
 
 import { Header } from '../../components/Header'
@@ -7,10 +9,20 @@ import { ReturnButton } from '../../components/ReturnButton'
 import { Input } from '../../components/Input'
 import { Textarea } from '../../components/Textarea'
 import { Section } from '../../components/Section'
+import { Markers } from '../../components/Markers'
 import { NoteItem } from '../../components/NoteItem'
 import { Button } from '../../components/Button'
 
 export function Create() {
+   const [tags, setTags] = useState([])
+   const [newTag, setNewTag] = useState("")
+
+   function handleAddTag() {
+      /* prevState é tudo que tinha antes na const tags */
+      setTags(prevState => [...prevState, newTag])
+      setNewTag("")
+   }
+
    return (
       <Container>
          <Header />
@@ -30,34 +42,43 @@ export function Create() {
                <div className="info">
                   <div className='inputs'>
                      <Input 
-                        value={""}
                         type='text' 
                         placeholder='Título' 
-                        onChange={""}   
                      />
                      <Input
-                        value={""}
                         type='number' 
                         placeholder='Sua nota (de 0 a 5)' 
-                        onChange={""}   
                      />
                   </div>
 
                   <div className='textarea'>
                      <Textarea 
-                        value={""}
                         placeholder='Observações'
-                        onChange={""}   
                      />
                   </div>
                </div>
 
                   <div className='section'>
                      <Section title='Marcadores'>
-                        <div className="markers">
-                           <NoteItem value='React'/>
-                           <NoteItem isNew placeholder='Novo marcador'/>
-                        </div>
+                        <Markers>
+                           {
+                              tags.map((tag, index) => (
+                                 <NoteItem 
+                                    /* passando uma chave para cada tag, através do index que o map
+                                    retorna  */
+                                    key={String(index)}
+                                    value={tag}
+                                 />
+                              ))
+                           }
+                           <NoteItem 
+                              isNew 
+                              placeholder='Nova tag'
+                              value={newTag}
+                              onChange={e => setNewTag(e.target.value)}
+                              onClick={handleAddTag}
+                           />
+                        </Markers>
                      </Section>
                   </div>
 

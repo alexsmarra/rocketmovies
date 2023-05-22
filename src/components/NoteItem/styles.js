@@ -39,4 +39,12 @@ export const Container = styled.div`
       border: none;
       line-height: 24px;
    }
+
+   .button-delete {
+      color: ${({ theme }) => theme.COLORS.RED};
+   }
+   
+   .button-add {
+      color: ${({ theme }) => theme.COLORS.ORANGE};
+   }
 `

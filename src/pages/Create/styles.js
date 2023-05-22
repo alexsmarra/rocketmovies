@@ -55,16 +55,6 @@ export const Content = styled.div`
       }  
    }
 
-   .markers {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2.4rem;
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PURE_BLACK};
-      padding: 2rem 1.5rem;
-      border-radius: .8rem;
-   }
-
    footer {
       display: flex;
       align-items: center;
