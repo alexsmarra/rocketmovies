@@ -23,6 +23,10 @@ export function Create() {
       setNewTag("")
    }
 
+   function handleRemoveTag(deleted) {
+      setTags(prevState => prevState.filter(tag => tag !== deleted))
+   }
+
    return (
       <Container>
          <Header />
@@ -68,6 +72,10 @@ export function Create() {
                                     retorna  */
                                     key={String(index)}
                                     value={tag}
+                                    /* quando a função tem params, temos que colocar dessa forma 
+                                    com uma arrow function, caso contrário ela tentará executar 
+                                    sozinha (palavras do professor) */
+                                    onClick={() => {handleRemoveTag(tag)}}
                                  />
                               ))
                            }
