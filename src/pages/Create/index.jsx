@@ -1,7 +1,10 @@
 import { Container, Content } from './styles.js'
 
 import { useState } from "react"
+import { api } from "../../services/api.js"
+import { useAuth } from '../../hooks/auth.jsx'
 
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import { Header } from '../../components/Header'
@@ -14,8 +17,36 @@ import { NoteItem } from '../../components/NoteItem'
 import { Button } from '../../components/Button'
 
 export function Create() {
+   const [title, setTitle] = useState("")
+   const [rating, setRating] = useState("")
+   const [description, setDescription] = useState("")
+
    const [tags, setTags] = useState([])
    const [newTag, setNewTag] = useState("")
+
+   const { user } = useAuth() 
+   const navigate = useNavigate()
+
+   async function handleNewNote() {
+      if(!title) {
+         return alert("Enter the title of the movie please!")
+      }
+
+      if(newTag) {
+         return alert("There are tags that were not added, are you sure you want to save?")
+      }
+
+      await api.post("/notes", {
+         username: user.name,
+         title, 
+         description,
+         rating: Number(rating),
+         tags
+      });
+
+      alert("Successfully created note!")
+      navigate("/")
+   }
 
    function handleAddTag() {
       /* prevState é tudo que tinha antes na const tags */
@@ -48,16 +79,19 @@ export function Create() {
                      <Input 
                         type='text' 
                         placeholder='Título' 
+                        onChange={e => setTitle(e.target.value)}
                      />
                      <Input
                         type='number' 
                         placeholder='Sua nota (de 0 a 5)' 
+                        onChange={e => setRating(e.target.value)}
                      />
                   </div>
 
                   <div className='textarea'>
                      <Textarea 
                         placeholder='Observações'
+                        onChange={e => setDescription(e.target.value)}
                      />
                   </div>
                </div>
@@ -91,8 +125,13 @@ export function Create() {
                   </div>
 
                   <footer>
-                     <Button title='Excluir filme'/>
-                     <Button title='Salvar alterações'/>
+                     <Button 
+                        title='Excluir filme'
+                     />
+                     <Button 
+                        title='Salvar alterações'
+                        onClick={handleNewNote}
+                     />
                   </footer>
             </Content>
          </main>
