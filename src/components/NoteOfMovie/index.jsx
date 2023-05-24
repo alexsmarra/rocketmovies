@@ -8,7 +8,7 @@ import { Tag } from "../Tag"
 export function NoteOfMovie({ data, ...rest }) {
    return (
       <Container {...rest}>
-         <Link to="/preview">
+         <Link>
             <header>
                <h2>{data.title}</h2>
 
@@ -21,10 +21,10 @@ export function NoteOfMovie({ data, ...rest }) {
                </p>
             </main>
 
-            { data.tags && 
+            { data.notesTags && 
                <footer>
                   {
-                     data.tags.map(tag =>
+                     data.notesTags.map(tag =>
                         <Tag key={tag.id} title={tag.name} />
                      )
                   }

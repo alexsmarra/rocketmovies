@@ -8,7 +8,7 @@ import { Input } from '../Input'
 
 import { Link } from 'react-router-dom'
 
-export function Header() {
+export function Header({ onChange }) {
    const { signOut, user } = useAuth()
 
    const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` 
@@ -23,7 +23,7 @@ export function Header() {
          <Search>
             <Input 
                placeholder="Pesquisar pelo título" 
-               onChange={""}
+               onChange={onChange}
             />
          </Search>
 
