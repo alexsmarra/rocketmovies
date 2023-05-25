@@ -8,6 +8,7 @@ export const Container = styled.div`
    font-size: 13px;
 
    display: flex;
+   align-items: center;
    gap: 6px;
 `
 

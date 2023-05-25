@@ -5,17 +5,24 @@ export const Container = styled.div`
    height: 100vh;
 
    display: grid;
-   grid-template-rows: 11.6rem, auto;
+   grid-template-rows: 11.6rem 10rem auto;
    grid-template-areas: 
-   "header"
-   "section";
+   'header'
+   'wrapper'
+   'main';
+
+   .btn-wrapper {
+      grid-area: wrapper;
+      margin-top: 3rem;
+   }
 
    .btn {
       margin: 3.8rem 12.3rem 2.8rem;
    }
 
    main {
-      margin: 0 12.3rem 15rem;
+      grid-area: main;
+      margin: 2rem 12.3rem 15rem;
       
       overflow-y: auto;
       scroll-behavior: smooth;
@@ -45,21 +52,26 @@ export const Container = styled.div`
    }
 
    .title {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 2rem;
 
       > h2 {
+         flex: 1;
          font-size: 3.6rem;
+         line-height: 50px;
+         margin-right: 15px;
+      }
+      
+      .stars {
+         flex: 7;
+         
+         > svg {
+            width: 22px;
+            height: 22px;
+         }
       }
    }
 
-   .stars {
-      > svg {
-         width: 20px;
-         height: 20px;
-      }
-   }
 
    info {
       display: flex;

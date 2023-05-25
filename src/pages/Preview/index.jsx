@@ -36,7 +36,7 @@ export function Preview() {
       <Container>
          <Header />
 
-         <Link to='/'>
+         <Link className='btn-wrapper' to='/'>
             <div className="btn">
                <ReturnButton title="Voltar" />
             </div>
@@ -49,7 +49,8 @@ export function Preview() {
                   <div className='title'>
                      <h2>{data.title}</h2>
 
-                     <Stars 
+                     <Stars
+                        className="stars"
                         rating={data.rating}
                      />
                   </div>

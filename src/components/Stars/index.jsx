@@ -3,7 +3,7 @@ import { Container } from './styles'
 import { FiStar } from 'react-icons/fi'
 import { AiFillStar } from 'react-icons/ai'
 
-export function Stars({ rating }) {
+export function Stars({ rating, ...rest }) {
    if(!rating) {
       return null
    }
@@ -19,6 +19,8 @@ export function Stars({ rating }) {
    }
 
    return (
-      <Container>{stars}</Container>
+      <Container {...rest}>
+         {stars}
+      </Container>
    )
 }
