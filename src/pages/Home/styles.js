@@ -48,10 +48,7 @@ export const AddMovie = styled.div`
 `
 
 export const Content = styled.div`
-  grid-area: main;
-
-  /* margin: 40px 40px 40px 40px; */
-  
+  grid-area: main;  
 
   > main {
     display: flex;
@@ -61,7 +58,7 @@ export const Content = styled.div`
     margin-right: 10px;
   }
 
-  @media(min-width: 1024px) {
+  @media(min-width: 1000px) {
 
   margin: 0 106px 40px 123px;
   overflow-y: auto;

@@ -6,6 +6,7 @@ import { useAuth } from '../../hooks/auth'
 import { useParams } from "react-router-dom"
 
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { Header } from '../../components/Header'
 
@@ -13,14 +14,28 @@ import { ReturnButton } from '../../components/ReturnButton'
 import { Stars } from '../../components/Stars'
 import { Tag } from '../../components/Tag'
 import { SummarySinapse } from '../../components/SummarySinapse'
+import avatarPlaceHolder from "../../assets/avatar_placeholder.svg"
 
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 export function Preview() {
    const { user } = useAuth()
    const params = useParams()
+   const navigate = useNavigate()
 
    const [data, setData] = useState(null)
+
+   const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` 
+                                 : avatarPlaceHolder
+
+   async function removeNote() {
+      const doYouReallyWant = confirm("Do you really want to delete this note?")
+
+      if(doYouReallyWant) {
+         await api.delete(`/notes/${params.id}`)
+         navigate(-1)
+      }
+   }
 
    useEffect(() => {
       async function fetchNoteDetails() {
@@ -57,12 +72,12 @@ export function Preview() {
 
                   <info>
                      <user>
-                        <img src={""} alt={`${user.name} img`}/>
-                        <span>{/* {`Por ${data.name}`} */}</span>
+                        <img src={avatarURL} alt={`${user.name} img`}/>
+                        <span>{user.name}</span>
                      </user>
 
                      <date>
-                        <AiOutlineClockCircle /> {""}
+                        <AiOutlineClockCircle /> {data.created_at}
                      </date>
                   </info>
                
@@ -81,6 +96,14 @@ export function Preview() {
                <section className='sinopse'>
                   <SummarySinapse content={data.description}/>
                </section>
+               
+               <button 
+                  className="delete"
+                  onClick={removeNote}
+               >
+                  Excluir
+               </button> 
+
             </main>
          }
       </Container>

@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-
 background: ${({ theme }) => theme.COLORS.BACKGROUND_MATTE};
 
 display: flex;
@@ -15,25 +14,24 @@ width: 100%;
 
 transition: all 0.3s;
 
-
-:hover {
-  transform: scale(0.98);
-  cursor: pointer;
-}
-
-  > a header {
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-    > h2 {
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
-      color: white;
-    }
+  :hover {
+    transform: scale(0.98);
+    cursor: pointer;
   }
+
+    > a header {
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+      > h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+      }
+    }
 
   main {
 
@@ -52,11 +50,11 @@ transition: all 0.3s;
       font-size: 16px;
       line-height: 19px;
     }
-}
+  }
 
-  footer{
+  footer {
     margin-top: 40px;
     display: flex;
     gap: 8px;
-}
+  }
 `

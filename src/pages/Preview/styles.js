@@ -56,10 +56,10 @@ export const Container = styled.div`
       align-items: center;
 
       > h2 {
-         flex: 1;
+         flex: 1.1;
          font-size: 3.6rem;
          line-height: 50px;
-         margin-right: 15px;
+         margin-right: 20px;
       }
       
       .stars {
@@ -114,6 +114,21 @@ export const Container = styled.div`
             padding-right: 20px;
          }
    }
+
+   button.delete {
+      background-color: ${({ theme }) => theme.COLORS.PINK};
+      color: ${({ theme }) => theme.COLORS.BLACK};
+
+      margin-top: 3rem;
+
+      padding: .4rem 1.6rem;
+
+      border: none;
+      border-radius: 8px;
+
+      font-size: 1.3rem;
+      font-weight: 500;
+   } 
 }
 `
 

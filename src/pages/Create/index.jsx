@@ -77,6 +77,7 @@ export function Create() {
                <div className="info">
                   <div className='inputs'>
                      <Input 
+                        className="teste"
                         type='text' 
                         placeholder='Título' 
                         onChange={e => setTitle(e.target.value)}
@@ -126,7 +127,9 @@ export function Create() {
 
                   <footer>
                      <Button 
-                        title='Excluir filme'
+                        title='Limpar'
+                        // to page refresh
+                        onClick={() => window.location.reload(true)}
                      />
                      <Button 
                         title='Salvar alterações'

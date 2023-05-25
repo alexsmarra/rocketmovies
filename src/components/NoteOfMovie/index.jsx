@@ -6,6 +6,7 @@ import { Stars } from "../Stars"
 import { Tag } from "../Tag"
 
 export function NoteOfMovie({ data, ...rest }) {
+
    return (
       <Container {...rest}>
          <Link>
@@ -31,6 +32,7 @@ export function NoteOfMovie({ data, ...rest }) {
                </footer>
             }
          </Link>
+         
       </Container>   
    )
 }
