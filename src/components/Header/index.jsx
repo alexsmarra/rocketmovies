@@ -7,12 +7,18 @@ import { Container, RocketMovies, Search, Profile } from './styles'
 import { Input } from '../Input'
 
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function Header({ onChange }) {
    const { signOut, user } = useAuth()
+   const navigate = useNavigate()
 
    const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` 
                                  : avatarPlaceholder
+
+   function handleBack() {
+      navigate("/profile")
+   }
 
    return (
       <Container>
@@ -29,7 +35,7 @@ export function Header({ onChange }) {
 
          <Profile>
             <div>
-               <span>
+               <span onClick={handleBack}>
                   {user.name}
                </span>
                <span 

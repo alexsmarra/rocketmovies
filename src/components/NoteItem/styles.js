@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
    display: flex;
-   /* gap: 16px; */
+   justify-content: center;
    align-items: center;
 
    width: auto;
@@ -18,12 +18,12 @@ export const Container = styled.div`
    > input {
       color: ${({ theme }) => theme.COLORS.WHITE};
       background: transparent;
-      width: ${({ isNew }) => !isNew ? "130px" : "160px"};
+      /* width: ${({ isNew }) => !isNew ? "130px" : "160px"}; */
       height: 5.6rem;
       
       border: none;
       border-radius: 10px;
-      padding: 12px;
+      padding: 0 3px;
 
       font-size: 1.6rem;
 
@@ -38,13 +38,19 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.PINK};
       border: none;
       line-height: 24px;
+      margin-left: -70px;
+      padding: 0 3px;
+      display: flex;
+      align-items: center;
    }
 
    .button-delete {
       color: ${({ theme }) => theme.COLORS.RED};
+      width: auto;
    }
    
    .button-add {
       color: ${({ theme }) => theme.COLORS.ORANGE};
+      width: auto;
    }
 `
