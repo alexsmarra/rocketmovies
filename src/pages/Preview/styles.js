@@ -56,7 +56,7 @@ export const Container = styled.div`
       align-items: center;
 
       > h2 {
-         flex: 1.1;
+         width: auto;
          font-size: 3.6rem;
          line-height: 50px;
          margin-right: 20px;
