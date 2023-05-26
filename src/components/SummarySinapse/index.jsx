@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-export function SummarySinapse({ content, ...rest }) {
+export function SummarySinapse({ content }) {
    return (
       <Container>
          <p>

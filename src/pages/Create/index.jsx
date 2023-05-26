@@ -27,9 +27,13 @@ export function Create() {
    const { user } = useAuth() 
    const navigate = useNavigate()
 
+   function handleBack() {
+      navigate(-1)
+   }
+
    async function handleNewNote() {
-      if(!title) {
-         return alert("Enter the title of the movie please!")
+      if(!title || !rating || !description) {
+         return alert("Enter the fields of the movie please!")
       }
 
       if(newTag) {
@@ -42,10 +46,10 @@ export function Create() {
          description,
          rating: Number(rating),
          tags
-      });
+      })
 
       alert("Successfully created note!")
-      navigate("/")
+      handleBack()
    }
 
    function handleAddTag() {
@@ -64,9 +68,12 @@ export function Create() {
          
          <main>
             <Content>
-               <Link to='/'>
+               <Link>
                   <div className="return-btn-div">
-                     <ReturnButton title="Voltar" />
+                     <ReturnButton 
+                        title="Voltar" 
+                        onClick={handleBack}
+                     />
                   </div>
                </Link>
 
@@ -77,7 +84,6 @@ export function Create() {
                <div className="info">
                   <div className='inputs'>
                      <Input 
-                        className="teste"
                         type='text' 
                         placeholder='Título' 
                         onChange={e => setTitle(e.target.value)}

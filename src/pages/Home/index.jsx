@@ -52,7 +52,7 @@ export function Home() {
                {
                   notes.map(note => (
                      <NoteOfMovie
-                        key={note.id}
+                        key={String(note.id)}
                         data={note}
                         onClick={() => handleDetails(note.id)}
                      />

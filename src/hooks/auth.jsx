@@ -11,7 +11,7 @@ function AuthProvider({ children }) {
    async function signIn({ email, password }) {
       try {
          const response = await api.post("/sessions", { email, password })
-         console.log(response)
+
          const { user, token } = response.data
 
          localStorage.setItem("@rocketmovies:user", JSON.stringify(user))
