@@ -54,8 +54,12 @@ export function Create() {
 
    function handleAddTag() {
       /* prevState é tudo que tinha antes na const tags */
-      setTags(prevState => [...prevState, newTag])
-      setNewTag("")
+      if(newTag.length > 0) {
+         setTags(prevState => [...prevState, newTag])
+         setNewTag("")
+      } else {
+         alert("To add a tag, it needs to be filled in!")
+      }
    }
 
    function handleRemoveTag(deleted) {
