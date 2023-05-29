@@ -6,3 +6,4 @@ Rocketmovies frontend challenge with reactJS, by stage 9 of Rocketseat's course
 <img width="1680" alt="crate" src="https://user-images.githubusercontent.com/61237811/230136255-fc81c276-a3ca-4d4b-9694-33b756bb2dee.png">
 
 
+.
