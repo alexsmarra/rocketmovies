@@ -1,12 +1,4 @@
 # Rocketmovies
-Rocketmovies frontend challenge with reactJS, by stage 9 of Rocketseat's course
-
-<img width="1680" alt="signin" src="https://user-images.githubusercontent.com/61237811/230136116-fe4429ec-55b0-4763-b42c-f885cd050037.png">
-<img width="1680" alt="profile" src="https://user-images.githubusercontent.com/61237811/230136102-be410957-69d9-4c97-aedb-4068870dfecc.png">
-<img width="1680" alt="crate" src="https://user-images.githubusercontent.com/61237811/230136255-fc81c276-a3ca-4d4b-9694-33b756bb2dee.png">
-
-
-# Rocketmovies
 Rocketmovies frontend challenge with reactJS, by stage 9 of Rocketseat's course, appication for publishing movies with their descriptions and user ratings.<br>
 <a href="https://github.com/alexsmarra/API-Rocket-Movies" target="_blank">Backend</a>
 
@@ -21,6 +13,7 @@ NodeJS,
 Express e
 Knex.
 
-
-
-.
+<img width="1680" alt="home" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/b67db7c6-a687-4b9a-ae42-a0ae3d33967a">
+<img width="1680" alt="login" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/f84ba33b-dd72-4c70-8e74-f6ec79e5a853">
+<img width="1680" alt="peview" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/3b9734f4-c7df-4920-bf6a-ad01c3ac74c0">
+<img width="1680" alt="profile" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/6b149318-6526-4df1-98aa-debc561bd301">
