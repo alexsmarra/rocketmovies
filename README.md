@@ -13,7 +13,7 @@ NodeJS,
 Express e
 Knex.
 
-<img width="1680" alt="home" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/b67db7c6-a687-4b9a-ae42-a0ae3d33967a">
 <img width="1680" alt="login" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/f84ba33b-dd72-4c70-8e74-f6ec79e5a853">
+<img width="1680" alt="home" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/b67db7c6-a687-4b9a-ae42-a0ae3d33967a">
 <img width="1680" alt="peview" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/3b9734f4-c7df-4920-bf6a-ad01c3ac74c0">
 <img width="1680" alt="profile" src="https://github.com/alexsmarra/rocketmovies/assets/61237811/6b149318-6526-4df1-98aa-debc561bd301">
