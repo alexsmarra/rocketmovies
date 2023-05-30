@@ -2,6 +2,8 @@
 Rocketmovies frontend challenge with reactJS, by stage 9 of Rocketseat's course, appication for publishing movies with their descriptions and user ratings.<br>
 See the <a href="https://github.com/alexsmarra/API-Rocket-Movies" target="_blank">backend</a>.
 
+See the <a href="https://roqmovies.netlify.app" target="_blank">app deploy</a>.
+
 You can view the layout of the project through this <a href="https://www.figma.com/file/gABt6gQNXzI3twzaUBs1jy/RocketMovies-(Copy)?type=design&node-id=0-1&t=f0C1HTYPvv4nqNWs-0" target="_blank">link</a> in Figma.
 
 This project was developed with the following technologies: 
