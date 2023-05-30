@@ -87,7 +87,7 @@ export function SignUp() {
                />
 
                <Button 
-                  title='Entrar'
+                  title='Criar'
                   onClick={handleSignUp}
                />
             </div>
